@@ -2,10 +2,10 @@ const { defineConfig } = require('vite');
 const react = require('@vitejs/plugin-react');
 const { resolve, basename } = require('path');
 const { globSync } = require('glob');
-const { readFileSync, writeFileSync, mkdirSync, existsSync } = require('fs');
+const { readFileSync } = require('fs');
 
 // --- Start of manifest generation logic ---
-function generateManifest() {
+function getManifestData() {
   const files = globSync('./src/pages/samples/qo_*.tsx');
   const manifest = [];
 
@@ -33,16 +33,10 @@ function generateManifest() {
   }
 
   manifest.sort((a, b) => a.title.localeCompare(b.title));
-
-  const outputDir = resolve(__dirname, '.generated');
-  if (!existsSync(outputDir)) {
-    mkdirSync(outputDir, { recursive: true });
-  }
-  writeFileSync(resolve(outputDir, 'pages.manifest.json'), JSON.stringify(manifest, null, 2));
-  console.log('Successfully generated pages.manifest.json in vite.config.js');
+  return manifest;
 }
 
-generateManifest();
+const manifestData = getManifestData();
 // --- End of manifest generation logic ---
 
 
@@ -55,6 +49,9 @@ const entries = Object.fromEntries(
 
 module.exports = defineConfig({
   plugins: [react()],
+  define: {
+    '__PAGES_MANIFEST__': JSON.stringify(manifestData)
+  },
   build: {
     rollupOptions: {
       input: {
