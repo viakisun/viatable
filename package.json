@@ -7,7 +7,6 @@
     "dev": "npx vite",
     "build": "npx vite build",
     "start": "npx vite preview",
-    "prebuild": "npx ts-node scripts/generate-pages-manifest.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
