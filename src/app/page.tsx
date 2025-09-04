@@ -1,18 +1,24 @@
 import React, { useState, useMemo } from 'react';
 import { Search, LayoutGrid } from 'lucide-react';
 import PageCard from '../components/PageCard';
-import manifest from '../../.generated/pages.manifest.json';
+
+// The __PAGES_MANIFEST__ global is injected by Vite.
+// We declare it here for TypeScript to recognize it.
+declare const __PAGES_MANIFEST__: PageMeta[];
 
 interface PageMeta {
   id: string;
   route: string;
   title: string;
-  summary: string;
+  summary:string;
   tags: string[];
 }
 
 const DashboardPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
+
+  // Use the injected global variable
+  const manifest = __PAGES_MANIFEST__;
 
   const filteredPages = useMemo(() => {
     if (!searchQuery) {
@@ -24,7 +30,7 @@ const DashboardPage: React.FC = () => {
       page.summary.toLowerCase().includes(lowerCaseQuery) ||
       page.tags.some(tag => tag.toLowerCase().includes(lowerCaseQuery))
     );
-  }, [searchQuery]);
+  }, [searchQuery, manifest]);
 
   return (
     <div className="min-h-screen bg-slate-50">
