@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Tag } from 'lucide-react';
 
 interface PageCardProps {
@@ -11,8 +12,8 @@ interface PageCardProps {
 
 const PageCard: React.FC<PageCardProps> = ({ route, title, summary, tags }) => {
   return (
-    <a
-      href={route}
+    <Link
+      to={route}
       className="group flex flex-col justify-between bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-slate-300 hover:-translate-y-1 transition-all duration-300 ease-in-out"
     >
       <div className="p-6">
@@ -33,7 +34,7 @@ const PageCard: React.FC<PageCardProps> = ({ route, title, summary, tags }) => {
         </span>
         <ArrowRight className="w-4 h-4 ml-2 text-slate-500 group-hover:text-slate-900 group-hover:translate-x-1 transition-transform" />
       </div>
-    </a>
+    </Link>
   );
 };
 
