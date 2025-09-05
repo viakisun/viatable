@@ -11,7 +11,7 @@ function getManifestData() {
 
   for (const file of files) {
     const id = basename(file, '.tsx');
-    const route = `/${id}.html`;
+    const route = `./${id}.html`;
     let title = id.replace(/_/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase());
     let summary = 'A sample page for Viatable.';
     let tags = [];

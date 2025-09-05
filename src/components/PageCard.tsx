@@ -13,7 +13,7 @@ const PageCard: React.FC<PageCardProps> = ({ route, title, summary, tags }) => {
   return (
     <a
       href={route}
-      className="group flex flex-col justify-between bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-md hover:border-slate-300 transition-all duration-300 ease-in-out"
+      className="group flex flex-col justify-between bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-slate-300 hover:-translate-y-1 transition-all duration-300 ease-in-out"
     >
       <div className="p-6">
         <h2 className="text-lg font-semibold text-slate-900 mb-2">{title}</h2>
