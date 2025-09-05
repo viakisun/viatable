@@ -11,7 +11,7 @@ function getManifestData() {
 
   for (const file of files) {
     const id = basename(file, '.tsx');
-    const route = `./${id}.html`;
+    const route = `/samples/${id}`; // New route format for the SPA
     let title = id.replace(/_/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase());
     let summary = 'A sample page for Viatable.';
     let tags = [];
@@ -39,14 +39,6 @@ function getManifestData() {
 const manifestData = getManifestData();
 // --- End of manifest generation logic ---
 
-
-const entries = Object.fromEntries(
-  globSync('./src/pages/samples/qo_*.tsx').map(file => [
-    basename(file, '.tsx'),
-    resolve(__dirname, file)
-  ])
-);
-
 module.exports = defineConfig({
   plugins: [react()],
   define: {
@@ -54,9 +46,9 @@ module.exports = defineConfig({
   },
   build: {
     rollupOptions: {
+      // Single entry point for an SPA
       input: {
         main: resolve(__dirname, 'index.html'),
-        ...entries
       }
     }
   }
