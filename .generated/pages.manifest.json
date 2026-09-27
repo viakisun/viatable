@@ -1,0 +1,114 @@
+[
+  {
+    "id": "qo_c001_landing",
+    "route": "/qo_c001_landing.html",
+    "title": "Qo C001 Landing",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_c002_menu",
+    "route": "/qo_c002_menu.html",
+    "title": "Qo C002 Menu",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_c003_item_details",
+    "route": "/qo_c003_item_details.html",
+    "title": "Qo C003 Item Details",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_c004_cart",
+    "route": "/qo_c004_cart.html",
+    "title": "Qo C004 Cart",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_c005_checkout",
+    "route": "/qo_c005_checkout.html",
+    "title": "Qo C005 Checkout",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_c006_payment",
+    "route": "/qo_c006_payment.html",
+    "title": "Qo C006 Payment",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_c007_order_status",
+    "route": "/qo_c007_order_status.html",
+    "title": "Qo C007 Order Status",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_c008_confirmation",
+    "route": "/qo_c008_confirmation.html",
+    "title": "Qo C008 Confirmation",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_s001_staff_login",
+    "route": "/qo_s001_staff_login.html",
+    "title": "Qo S001 Staff Login",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_s002_dashboard",
+    "route": "/qo_s002_dashboard.html",
+    "title": "Qo S002 Dashboard",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_s003_order_management",
+    "route": "/qo_s003_order_management.html",
+    "title": "Qo S003 Order Management",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_s004_kitchen_display",
+    "route": "/qo_s004_kitchen_display.html",
+    "title": "Qo S004 Kitchen Display",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_s005_menu_management",
+    "route": "/qo_s005_menu_management.html",
+    "title": "Qo S005 Menu Management",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_s006_table_management",
+    "route": "/qo_s006_table_management.html",
+    "title": "Qo S006 Table Management",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_s007_customer_service",
+    "route": "/qo_s007_customer_service.html",
+    "title": "Qo S007 Customer Service",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  },
+  {
+    "id": "qo_s008_staff_analytics",
+    "route": "/qo_s008_staff_analytics.html",
+    "title": "Qo S008 Staff Analytics",
+    "summary": "A sample page for Viatable.",
+    "tags": []
+  }
+]
